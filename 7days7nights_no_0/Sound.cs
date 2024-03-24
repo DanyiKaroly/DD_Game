@@ -72,6 +72,7 @@ namespace Demo
             song.GameEnd();
             song.sfxTestStop();
 
+            song.MenuSongStart();
             this.Hide();
         }
 
