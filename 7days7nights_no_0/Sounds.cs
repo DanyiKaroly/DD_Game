@@ -14,6 +14,8 @@ namespace Demo
         private static WindowsMediaPlayer shootMedia2;
         private static WindowsMediaPlayer enemyDieMedia;
         private static WindowsMediaPlayer playerDieMedia;
+        private static WindowsMediaPlayer MenuMusic;
+
 
         private static int volume = 50;
         private static int volumesfx = 50;
@@ -25,8 +27,10 @@ namespace Demo
             shootMedia2 = new WindowsMediaPlayer();
             enemyDieMedia = new WindowsMediaPlayer();
             playerDieMedia = new WindowsMediaPlayer();
+            MenuMusic = new WindowsMediaPlayer();
 
             gameMedia.settings.volume = volume;
+            MenuMusic.settings.volume = volume;
 
             shootMedia.settings.volume = volumesfx;
             shootMedia2.settings.volume = volumesfx;
@@ -37,6 +41,11 @@ namespace Demo
 
             gameMedia.settings.autoStart = false;
             gameMedia.URL = "songs\\GameSongs.mp3";
+
+            MenuMusic.settings.autoStart = false;
+            MenuMusic.URL = "songs\\MenuMusic.mp3";
+
+
 
             shootMedia.settings.autoStart = false;
             shootMedia.URL = "songs\\Gunshot_Sound_Effect.mp3";
@@ -51,6 +60,17 @@ namespace Demo
             shootMedia2.URL = "songs\\ShootSongs.mp3";
 
         }
+
+        public void MenuSongStart()
+        {
+            MenuMusic.controls.play();
+            MenuMusic.settings.setMode("loop", true);
+        }
+        public void MenuSongStop()
+        {
+            MenuMusic.controls.stop();
+        }
+
         public void GameMusic()
         {
             gameMedia.controls.play();
@@ -95,6 +115,7 @@ namespace Demo
         {
             volume = VolumeMusic;
             gameMedia.settings.volume = VolumeMusic;
+            MenuMusic.settings.volume = VolumeMusic;
         }
         public void VolumeSFXSet(int SETVolumesfx)
         {

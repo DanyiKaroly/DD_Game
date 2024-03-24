@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _7days7nights_no_0;
+using System;
 using System.Windows.Forms;
 
 namespace Demo
@@ -8,6 +9,7 @@ namespace Demo
         Sounds song;
         bool var = false;
         bool varsfx = false;
+
         public Sound()
         {
             song = new Sounds();
@@ -69,7 +71,8 @@ namespace Demo
         {
             song.GameEnd();
             song.sfxTestStop();
-            Close();
+
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)

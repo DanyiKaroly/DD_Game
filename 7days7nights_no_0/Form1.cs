@@ -2,12 +2,15 @@ using Demo;
 
 namespace _7days7nights_no_0
 {
-    public partial class Form1 : Form
+    public partial class MenuForm : Form
     {
-        public Form1()
+        Sounds songs = new Sounds();
+        Sound formMenu = new Sound();
+        public MenuForm()
         {
             InitializeComponent();
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -16,13 +19,12 @@ namespace _7days7nights_no_0
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /* Sound soundsSettigs = new Sound() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
-            soundsSettigs.FormBorderStyle = FormBorderStyle.None;
-            this.Controls.Add(soundsSettigs);
-            soundsSettigs.Show(); */
-            Sound form = new Sound();
-            form.Show();
+            formMenu.Show();
+        }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            songs.MenuSongStart();
         }
     }
 }

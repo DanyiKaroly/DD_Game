@@ -1,6 +1,6 @@
 ﻿namespace _7days7nights_no_0
 {
-    partial class Form1
+    partial class MenuForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -87,7 +87,7 @@
             label1.Text = "7days 7nights";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // MenuForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -103,10 +103,11 @@
             FormBorderStyle = FormBorderStyle.None;
             MaximumSize = new Size(1024, 1024);
             MinimumSize = new Size(1024, 1024);
-            Name = "Form1";
+            Name = "MenuForm";
             SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainForm";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
