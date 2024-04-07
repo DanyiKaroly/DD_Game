@@ -40,9 +40,10 @@
             InventoryButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 220, 220, 220);
             InventoryButton.FlatStyle = FlatStyle.Flat;
             InventoryButton.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            InventoryButton.Location = new Point(64, 86);
+            InventoryButton.Location = new Point(91, 143);
+            InventoryButton.Margin = new Padding(4, 5, 4, 5);
             InventoryButton.Name = "InventoryButton";
-            InventoryButton.Size = new Size(142, 71);
+            InventoryButton.Size = new Size(203, 118);
             InventoryButton.TabIndex = 0;
             InventoryButton.Text = "Inventory";
             InventoryButton.UseVisualStyleBackColor = true;
@@ -53,12 +54,14 @@
             SkillsButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 220, 220, 220);
             SkillsButton.FlatStyle = FlatStyle.Flat;
             SkillsButton.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            SkillsButton.Location = new Point(336, 86);
+            SkillsButton.Location = new Point(480, 143);
+            SkillsButton.Margin = new Padding(4, 5, 4, 5);
             SkillsButton.Name = "SkillsButton";
-            SkillsButton.Size = new Size(142, 71);
+            SkillsButton.Size = new Size(203, 118);
             SkillsButton.TabIndex = 1;
             SkillsButton.Text = "Skills";
             SkillsButton.UseVisualStyleBackColor = true;
+            SkillsButton.Click += SkillsButton_Click;
             // 
             // BackButton
             // 
@@ -66,9 +69,10 @@
             BackButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 220, 220, 220);
             BackButton.FlatStyle = FlatStyle.Flat;
             BackButton.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            BackButton.Location = new Point(212, 171);
+            BackButton.Location = new Point(303, 285);
+            BackButton.Margin = new Padding(4, 5, 4, 5);
             BackButton.Name = "BackButton";
-            BackButton.Size = new Size(118, 60);
+            BackButton.Size = new Size(169, 100);
             BackButton.TabIndex = 2;
             BackButton.Text = "Back";
             BackButton.UseVisualStyleBackColor = true;
@@ -76,16 +80,17 @@
             // 
             // InventoryPerSkills
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.AppWorkspace;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(543, 264);
+            ClientSize = new Size(776, 440);
             Controls.Add(BackButton);
             Controls.Add(SkillsButton);
             Controls.Add(InventoryButton);
             Cursor = Cursors.Cross;
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "InventoryPerSkills";
             ShowIcon = false;
             ShowInTaskbar = false;

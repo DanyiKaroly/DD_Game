@@ -26,5 +26,11 @@ namespace _7days7nights_no_0
         {
             this.Hide();
         }
+
+        private void SkillsButton_Click(object sender, EventArgs e)
+        {
+            skills skillsek = new skills();
+            skillsek.Show();
+        }
     }
 }
