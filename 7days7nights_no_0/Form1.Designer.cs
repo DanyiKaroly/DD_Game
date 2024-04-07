@@ -29,60 +29,77 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            exitButton = new Button();
+            settingsButton = new Button();
+            inventoryButton = new Button();
+            startButton = new Button();
             label1 = new Label();
             SuspendLayout();
             // 
-            // button1
+            // exitButton
             // 
-            button1.Location = new Point(384, 790);
-            button1.Name = "button1";
-            button1.Size = new Size(242, 75);
-            button1.TabIndex = 0;
-            button1.Text = "Exit";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            exitButton.BackColor = Color.FromArgb(100, 240, 240, 240);
+            exitButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 220, 220, 220);
+            exitButton.FlatStyle = FlatStyle.Flat;
+            exitButton.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            exitButton.Location = new Point(384, 790);
+            exitButton.Name = "exitButton";
+            exitButton.Size = new Size(242, 75);
+            exitButton.TabIndex = 0;
+            exitButton.Text = "Exit";
+            exitButton.UseVisualStyleBackColor = true;
+            exitButton.Click += button1_Click;
             // 
-            // button2
+            // settingsButton
             // 
-            button2.Location = new Point(384, 597);
-            button2.Name = "button2";
-            button2.Size = new Size(242, 75);
-            button2.TabIndex = 1;
-            button2.Text = "Settings";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            settingsButton.BackColor = Color.FromArgb(100, 240, 240, 240);
+            settingsButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 220, 220, 220);
+            settingsButton.FlatStyle = FlatStyle.Flat;
+            settingsButton.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            settingsButton.Location = new Point(384, 597);
+            settingsButton.Name = "settingsButton";
+            settingsButton.Size = new Size(242, 75);
+            settingsButton.TabIndex = 1;
+            settingsButton.Text = "Settings";
+            settingsButton.UseVisualStyleBackColor = true;
+            settingsButton.Click += button2_Click;
             // 
-            // button3
+            // inventoryButton
             // 
-            button3.Location = new Point(384, 467);
-            button3.Name = "button3";
-            button3.Size = new Size(242, 75);
-            button3.TabIndex = 2;
-            button3.Text = "Inventory";
-            button3.UseVisualStyleBackColor = true;
+            inventoryButton.BackColor = Color.FromArgb(100, 240, 240, 240);
+            inventoryButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 220, 220, 220);
+            inventoryButton.FlatStyle = FlatStyle.Flat;
+            inventoryButton.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            inventoryButton.Location = new Point(384, 467);
+            inventoryButton.Name = "inventoryButton";
+            inventoryButton.Size = new Size(242, 75);
+            inventoryButton.TabIndex = 2;
+            inventoryButton.Text = "Inventory";
+            inventoryButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // startButton
             // 
-            button4.Location = new Point(384, 342);
-            button4.Name = "button4";
-            button4.Size = new Size(242, 75);
-            button4.TabIndex = 3;
-            button4.Text = "Start";
-            button4.UseVisualStyleBackColor = true;
+            startButton.BackColor = Color.FromArgb(100, 240, 240, 240);
+            startButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 220, 220, 220);
+            startButton.FlatStyle = FlatStyle.Flat;
+            startButton.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            startButton.Location = new Point(384, 342);
+            startButton.Name = "startButton";
+            startButton.Size = new Size(242, 75);
+            startButton.TabIndex = 3;
+            startButton.Text = "Start";
+            startButton.UseVisualStyleBackColor = true;
+            startButton.Click += button4_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Sylfaen", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label1.Font = new Font("Yu Gothic", 39.75F, FontStyle.Bold, GraphicsUnit.Point, 238);
             label1.ForeColor = Color.FromArgb(192, 0, 0);
-            label1.Location = new Point(355, 108);
+            label1.Location = new Point(337, 113);
             label1.Name = "label1";
-            label1.Size = new Size(339, 70);
+            label1.Size = new Size(384, 68);
             label1.TabIndex = 4;
             label1.Text = "7days 7nights";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -95,10 +112,10 @@
             ClientSize = new Size(1024, 1024);
             ControlBox = false;
             Controls.Add(label1);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(startButton);
+            Controls.Add(inventoryButton);
+            Controls.Add(settingsButton);
+            Controls.Add(exitButton);
             Cursor = Cursors.Cross;
             FormBorderStyle = FormBorderStyle.None;
             MaximumSize = new Size(1024, 1024);
@@ -114,10 +131,10 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button exitButton;
+        private Button settingsButton;
+        private Button inventoryButton;
+        private Button startButton;
         private Label label1;
     }
 }

@@ -27,5 +27,12 @@ namespace _7days7nights_no_0
         {
             songs.MenuSongStart();
         }
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
