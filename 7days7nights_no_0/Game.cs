@@ -16,5 +16,13 @@ namespace _7days7nights_no_0
         {
             InitializeComponent();
         }
+
+        private void Game_paint(object sender, PaintEventArgs e)
+        {
+            Graphics Play = e.Graphics;
+
+            Play.DrawImage(Image.FromFile(ImageContainer.SkinImage[Convert.ToInt32(Player.Skin.Id)]), Player.x, Player.y, 64, 64);
+
+        }
     }
 }

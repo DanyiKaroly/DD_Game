@@ -1,4 +1,5 @@
 using Demo;
+using System.Security.Cryptography;
 
 namespace _7days7nights_no_0
 {
@@ -7,6 +8,7 @@ namespace _7days7nights_no_0
         Sounds songs = new Sounds();
         Sound formMenu = new Sound();
         InventoryPerSkills MoreMenuButton = new InventoryPerSkills();
+        Levels levels = new Levels();
         public MenuForm()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace _7days7nights_no_0
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            levels.Show();
         }
 
         private void inventoryButton_Click(object sender, EventArgs e)

@@ -28,15 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(95, 63);
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.Cursor = Cursors.Cross;
+            pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(405, 234);
+            pictureBox1.Size = new Size(2282, 1053);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -44,12 +48,15 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1008, 985);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Game";
+            ShowInTaskbar = false;
             Text = "Game";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
