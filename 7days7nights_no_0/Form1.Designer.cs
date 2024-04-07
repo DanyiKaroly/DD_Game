@@ -76,6 +76,7 @@
             inventoryButton.TabIndex = 2;
             inventoryButton.Text = "Inventory";
             inventoryButton.UseVisualStyleBackColor = true;
+            inventoryButton.Click += inventoryButton_Click;
             // 
             // startButton
             // 

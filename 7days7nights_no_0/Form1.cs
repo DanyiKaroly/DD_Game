@@ -6,6 +6,7 @@ namespace _7days7nights_no_0
     {
         Sounds songs = new Sounds();
         Sound formMenu = new Sound();
+        InventoryPerSkills MoreMenuButton = new InventoryPerSkills();
         public MenuForm()
         {
             InitializeComponent();
@@ -34,5 +35,9 @@ namespace _7days7nights_no_0
 
         }
 
+        private void inventoryButton_Click(object sender, EventArgs e)
+        {
+            MoreMenuButton.Show();
+        }
     }
 }

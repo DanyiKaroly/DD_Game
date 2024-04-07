@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sound));
             volumeTrackBar = new TrackBar();
             folderBrowserDialog1 = new FolderBrowserDialog();
             panel1 = new Panel();
@@ -150,7 +151,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = SystemColors.ControlLight;
+            panel2.BackColor = Color.Silver;
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(label2);
@@ -161,12 +162,14 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(396, 257);
             panel2.TabIndex = 6;
+            panel2.Paint += panel2_Paint;
             // 
             // Sound
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1024, 1024);
             Controls.Add(panel2);
             Controls.Add(panel1);

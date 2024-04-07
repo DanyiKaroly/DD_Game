@@ -115,6 +115,10 @@ namespace Demo
 
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            panel2.BackColor = Color.FromArgb(200, 240, 240, 240);
 
+        }
     }
 }
