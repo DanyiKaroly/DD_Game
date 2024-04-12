@@ -10,6 +10,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Sprites\Kuno_walk1.png" />
+    <None Remove="Sprites\Kuno_walk2.png" />
+    <None Remove="Sprites\Kuno_walk3.png" />
+    <None Remove="Sprites\Kuno_walk4.png" />
+    <None Remove="Sprites\Zom_walk1.png" />
+    <None Remove="Sprites\Zom_walk2.png" />
+    <None Remove="Sprites\Zom_walk3.png" />
+    <None Remove="Sprites\Zom_walk4.png" />
+    <None Remove="Sprites\Zom_walk5.png" />
+    <None Remove="Sprites\Zom_walk6.png" />
+    <None Remove="Sprites\Zom_walk7.png" />
+    <None Remove="Sprites\Zom_walk8.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <COMReference Include="WMPLib">
       <WrapperTool>tlbimp</WrapperTool>
       <VersionMinor>0</VersionMinor>
@@ -19,6 +34,21 @@
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Sprites\Kuno_walk1.png" />
+    <EmbeddedResource Include="Sprites\Kuno_walk2.png" />
+    <EmbeddedResource Include="Sprites\Kuno_walk3.png" />
+    <EmbeddedResource Include="Sprites\Kuno_walk4.png" />
+    <EmbeddedResource Include="Sprites\Zom_walk1.png" />
+    <EmbeddedResource Include="Sprites\Zom_walk2.png" />
+    <EmbeddedResource Include="Sprites\Zom_walk3.png" />
+    <EmbeddedResource Include="Sprites\Zom_walk4.png" />
+    <EmbeddedResource Include="Sprites\Zom_walk5.png" />
+    <EmbeddedResource Include="Sprites\Zom_walk6.png" />
+    <EmbeddedResource Include="Sprites\Zom_walk7.png" />
+    <EmbeddedResource Include="Sprites\Zom_walk8.png" />
   </ItemGroup>
 
   <ItemGroup>

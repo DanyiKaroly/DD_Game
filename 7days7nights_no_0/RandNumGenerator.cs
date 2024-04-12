@@ -1,6 +1,6 @@
 ﻿using _7days7nights_no_0;
 
-namespace ZombieGameMovement
+namespace _7days7nights_no_0
 {
     public static class RandNumGenerator
     {

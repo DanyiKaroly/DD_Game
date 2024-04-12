@@ -1,4 +1,4 @@
-﻿namespace ZombieGameMovement
+﻿namespace _7days7nights_no_0
 {
     internal class Zombie
     {

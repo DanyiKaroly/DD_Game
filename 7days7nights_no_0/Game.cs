@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static _7days7nights_no_0.Bullet;
-using ZombieGameMovement;
 
 namespace _7days7nights_no_0
 {
@@ -65,7 +64,7 @@ namespace _7days7nights_no_0
             {
                 healthBar.Value = 0;
                 //MessageBox.Show("Ded");
-                GameOver();
+                //GameOver();
             }
 
             txtscore.Text = "Kills: " + Score;

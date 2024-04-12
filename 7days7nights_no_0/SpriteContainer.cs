@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace ZombieGameMovement
+namespace _7days7nights_no_0
 {
     static internal class SpriteContainer
     {
@@ -24,9 +24,9 @@ namespace ZombieGameMovement
             GetImageFromExecutingAssembly("Zom_walk8.png"),
         ];
 
-        public static Image GetImageFromExecutingAssembly(string fileName)
+        private static Image GetImageFromExecutingAssembly(string fileName)
         {
-            using Stream? stream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"ZombieGameMovement.Sprites.{fileName}");
+            using Stream? stream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"_7days7nights_no_0.Sprites.{fileName}");
             if (stream is not null)
             {
                 return Image.FromStream(stream);
