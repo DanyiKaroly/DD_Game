@@ -1,4 +1,6 @@
-﻿namespace ZombieGameMovement
+﻿using _7days7nights_no_0;
+
+namespace ZombieGameMovement
 {
     public static class RandNumGenerator
     {
@@ -12,19 +14,19 @@
             {
                 case 0:
                     x = 0;
-                    y = random.Next(0,GameWithFixMap.FormWidth);
+                    y = random.Next(0,Game.FormWidth);
                     break;
                 case 1:
-                    x = GameWithFixMap.FormHeight;
-                    y = random.Next(0, GameWithFixMap.FormWidth);
+                    x = Game.FormHeight;
+                    y = random.Next(0, Game.FormWidth);
                     break;
                 case 2:
-                    x = random.Next(0, GameWithFixMap.FormHeight);
+                    x = random.Next(0, Game.FormHeight);
                     y = 0;
                     break;
                 case 3:
-                    x = random.Next(0, GameWithFixMap.FormHeight);
-                    y = GameWithFixMap.FormWidth;
+                    x = random.Next(0, Game.FormHeight);
+                    y = Game.FormWidth;
                     break;
                 default:
                     x = 0;

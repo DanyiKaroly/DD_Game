@@ -63,7 +63,7 @@
             plus_speed.TabIndex = 0;
             plus_speed.Text = "+";
             plus_speed.UseVisualStyleBackColor = true;
-            plus_speed.Click += plus_speed_Click;
+            //plus_speed.Click += plus_speed_Click;
             // 
             // minus_speed
             // 
@@ -74,7 +74,7 @@
             minus_speed.TabIndex = 1;
             minus_speed.Text = "-";
             minus_speed.UseVisualStyleBackColor = true;
-            minus_speed.Click += minus_speed_Click;
+            //minus_speed.Click += minus_speed_Click;
             // 
             // plus_firerate
             // 
@@ -85,7 +85,7 @@
             plus_firerate.TabIndex = 2;
             plus_firerate.Text = "+";
             plus_firerate.UseVisualStyleBackColor = true;
-            plus_firerate.Click += plus_firerate_Click;
+            //plus_firerate.Click += plus_firerate_Click;
             // 
             // plus_hp
             // 
@@ -96,7 +96,7 @@
             plus_hp.TabIndex = 3;
             plus_hp.Text = "+";
             plus_hp.UseVisualStyleBackColor = true;
-            plus_hp.Click += plus_hp_Click;
+            //plus_hp.Click += plus_hp_Click;
             // 
             // plus_damage
             // 
@@ -107,7 +107,7 @@
             plus_damage.TabIndex = 4;
             plus_damage.Text = "+";
             plus_damage.UseVisualStyleBackColor = true;
-            plus_damage.Click += plus_damage_Click;
+            //plus_damage.Click += plus_damage_Click;
             // 
             // plus_reload_time
             // 
@@ -118,7 +118,7 @@
             plus_reload_time.TabIndex = 5;
             plus_reload_time.Text = "+";
             plus_reload_time.UseVisualStyleBackColor = true;
-            plus_reload_time.Click += plus_reload_time_Click;
+            //plus_reload_time.Click += plus_reload_time_Click;
             // 
             // minus_firerate
             // 
@@ -129,7 +129,7 @@
             minus_firerate.TabIndex = 6;
             minus_firerate.Text = "-";
             minus_firerate.UseVisualStyleBackColor = true;
-            minus_firerate.Click += minus_firerate_Click;
+            //minus_firerate.Click += minus_firerate_Click;
             // 
             // minus_hp
             // 
@@ -140,7 +140,7 @@
             minus_hp.TabIndex = 7;
             minus_hp.Text = "-";
             minus_hp.UseVisualStyleBackColor = true;
-            minus_hp.Click += minus_hp_Click;
+            //minus_hp.Click += minus_hp_Click;
             // 
             // minus_damage
             // 
@@ -151,7 +151,7 @@
             minus_damage.TabIndex = 8;
             minus_damage.Text = "-";
             minus_damage.UseVisualStyleBackColor = true;
-            minus_damage.Click += minus_damage_Click;
+            //minus_damage.Click += minus_damage_Click;
             // 
             // minus_reload_time
             // 
@@ -162,7 +162,7 @@
             minus_reload_time.TabIndex = 9;
             minus_reload_time.Text = "-";
             minus_reload_time.UseVisualStyleBackColor = true;
-            minus_reload_time.Click += minus_reload_time_Click;
+            //minus_reload_time.Click += minus_reload_time_Click;
             // 
             // label1
             // 
@@ -273,7 +273,7 @@
             Back_To_Main.TabIndex = 20;
             Back_To_Main.Text = "Back";
             Back_To_Main.UseVisualStyleBackColor = true;
-            Back_To_Main.Click += Back_To_Main_Click;
+            //Back_To_Main.Click += Back_To_Main_Click;
             // 
             // Level
             // 
@@ -337,7 +337,7 @@
             Name = "skills";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Skills";
-            Load += skills_Load;
+            //Load += skills_Load;
             ResumeLayout(false);
             PerformLayout();
         }
