@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _7days7nights_no_0
+﻿namespace _7days7nights_no_0
 {
     internal class Bullet
     {
@@ -37,15 +31,6 @@ namespace _7days7nights_no_0
             {
                 Interval = Speed
             };
-        }
-
-        public void MakeBullet(PictureBox form)
-        {
-            form.Controls.Add(BulletImg);
-            BulletImg.BringToFront();
-
-            //BulletTimer.Tick += new EventHandler(BulletTimerEvent);
-            //BulletTimer.Start();
         }
 
         public void MakeBullet(Form form)

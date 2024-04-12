@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _7days7nights_no_0
+﻿namespace _7days7nights_no_0
 {
     public class Weapon
     {
-
         public EnumContainer.WeaponType WeaponType { get; set; }
         public int Damage { get; set; }
         public int FireRate { get; set; }

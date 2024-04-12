@@ -278,7 +278,7 @@ namespace _7days7nights_no_0
 
         private void ShootBullet(DirectionType direction)
         {
-            Bullet bullet = new(direction, Player.PlayerX, Player.PlayerY + Player.PlayerHeight / 2);
+            Bullet bullet = new(direction, Player.PlayerX + Player.PlayerWidth / 2, Player.PlayerY + Player.PlayerHeight / 2);
             bullet.BulletTimer.Tick += new EventHandler(MainTimerEvent!);
             BulletList.Add(bullet);
             bullet.MakeBullet(this);
