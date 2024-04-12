@@ -31,7 +31,7 @@ namespace _7days7nights_no_0
         private List<Bullet> BulletList { get; set; }
 
 
-        public GameWithFixMap()
+        public Game()
         {
             InitializeComponent();
 
@@ -168,7 +168,7 @@ namespace _7days7nights_no_0
                     bullet.BulletImg.Top += bullet.Speed;
                 }
 
-                else if (bullet.BulletImg.Left < 0 || bullet.BulletImg.Left > GameWithFixMap.FormWidth || bullet.BulletImg.Top < 0 || bullet.BulletImg.Top > GameWithFixMap.FormHeight)
+                else if (bullet.BulletImg.Left < 0 || bullet.BulletImg.Left > Game.FormWidth || bullet.BulletImg.Top < 0 || bullet.BulletImg.Top > Game.FormHeight)
                 {
                     bullet.BulletTimer.Stop();
                     bullet.BulletTimer.Dispose();

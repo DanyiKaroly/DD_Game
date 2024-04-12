@@ -30,8 +30,12 @@ namespace _7days7nights_no_0
 
         private void Level1_Click(object sender, EventArgs e)
         {
-            Game level1 = new Game();
-            level1.Show();
+            Game game = new()
+            {
+                FormBorderStyle = FormBorderStyle.None,
+                WindowState = FormWindowState.Maximized
+            };
+            game.Show();
         }
     }
 }
