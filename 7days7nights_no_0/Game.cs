@@ -22,10 +22,6 @@ namespace _7days7nights_no_0
         private int ZombieSpeed { get; }
         private int Score { get; set; }
         private int MaxEnemy { get; set; }
-
-        private int Steps { get; set; }
-        private int SlowDownFrameRate { get; set; }
-
         private List<Zombie> ZombiesList { get; set; }
         private List<Bullet> BulletList { get; set; }
 
@@ -42,8 +38,6 @@ namespace _7days7nights_no_0
             Player = new(100, 10, FormWidth / 2, FormHeight / 2);
             ZombieSpeed = 2;
             Score = 0;
-            Steps = 0;
-            SlowDownFrameRate = 0;
             ZombiesList = [];
             BulletList = [];
             MaxEnemy = 10;
