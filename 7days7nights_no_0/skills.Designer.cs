@@ -266,10 +266,10 @@
             // 
             // Back_To_Main
             // 
-            Back_To_Main.Location = new Point(530, 422);
+            Back_To_Main.Location = new Point(498, 399);
             Back_To_Main.Margin = new Padding(2);
             Back_To_Main.Name = "Back_To_Main";
-            Back_To_Main.Size = new Size(78, 20);
+            Back_To_Main.Size = new Size(78, 27);
             Back_To_Main.TabIndex = 20;
             Back_To_Main.Text = "Back";
             Back_To_Main.UseVisualStyleBackColor = true;
@@ -308,7 +308,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(626, 471);
+            ClientSize = new Size(600, 450);
             Controls.Add(Skill_Point);
             Controls.Add(XP);
             Controls.Add(Level);
@@ -333,8 +333,12 @@
             Controls.Add(plus_firerate);
             Controls.Add(minus_speed);
             Controls.Add(plus_speed);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "skills";
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            SizeGripStyle = SizeGripStyle.Hide;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Skills";
             Load += skills_Load;
