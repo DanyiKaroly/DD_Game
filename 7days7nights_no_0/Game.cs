@@ -306,5 +306,7 @@ namespace _7days7nights_no_0
                 g.DrawImage(zombie.ZombieImage, zombie.EnemyX, zombie.EnemyY, zombie.EnemyWidth, zombie.EnemyHeight);
             }
         }
+
+
     }
 }

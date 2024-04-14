@@ -3,19 +3,28 @@
     internal class Player
     {
         public Image PlayerImg { get; private set; }
-        public int PlayerHealth { get; set; }
-        public int PlayerSpeed { get; }
+        public static int PlayerHealth { get; set; }
+        public static int PlayerSpeed { get; set; }
         public int PlayerX { get; set; }
         public int PlayerY { get; set; }
         public int PlayerWidth { get; }
         public int PlayerHeight { get; }
         private int Steps { get; set; }
         private int SlowDownFrameRate { get; set; }
+        public static int Xp { get; set; }
+        public static int Level { get; set; }
+        public static int SkillPoints { get; set; }
+        public static int Firerate { get; set; }
+        public static int Reload_Time { get; set; }
+
+        public static int Damage { get; set; }
+
         public bool GoLeft { get; set; }
         public bool GoRight { get; set; }
         public bool GoUp { get; set; }
         public bool GoDown { get; set; }
         public bool Attack { get; set; }
+
 
         public Player(int playerHealth, int playerSpeed, int playerX, int playerY)
         {
@@ -51,6 +60,19 @@
             }
 
             PlayerImg = source[Steps];
+        }
+
+        public static void set_XP(int be_xp)
+        {
+            be_xp += Xp;
+            while (be_xp >= 1000)
+            {
+                be_xp = be_xp - 1000;
+                Level++;
+                SkillPoints++;
+
+            }
+            Xp = be_xp;
         }
 
         //TODO: same method for animating the death of the player like in the zombie class
