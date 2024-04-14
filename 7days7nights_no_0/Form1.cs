@@ -1,6 +1,7 @@
 using Demo;
 using System.Security.Cryptography;
 
+
 namespace _7days7nights_no_0
 {
     public partial class MenuForm : Form
@@ -9,9 +10,12 @@ namespace _7days7nights_no_0
         Sound formMenu = new Sound();
         InventoryPerSkills MoreMenuButton = new InventoryPerSkills();
         Levels levels = new Levels();
+        DBmethods dBmethods = new DBmethods();
+        
         public MenuForm()
         {
             InitializeComponent();
+            dBmethods.Read_from_DB();
         }
 
 
@@ -29,6 +33,9 @@ namespace _7days7nights_no_0
         private void Form1_Load(object sender, EventArgs e)
         {
             songs.MenuSongStart();
+            
+
+
         }
 
 
@@ -40,6 +47,7 @@ namespace _7days7nights_no_0
         private void inventoryButton_Click(object sender, EventArgs e)
         {
             MoreMenuButton.Show();
+            
         }
     }
 }

@@ -52,6 +52,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Stub.System.Data.SQLite.Core.NetFramework" Version="1.0.118" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.118" />
+    <PackageReference Include="System.Data.SQLite.EF6" Version="1.0.118" />
+    <PackageReference Include="System.Data.SQLite.Linq" Version="1.0.118" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Levels.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +78,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="db_file\DD.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="songs\EnemyDie.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

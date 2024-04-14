@@ -47,9 +47,10 @@
             txtammo.AutoSize = true;
             txtammo.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             txtammo.ForeColor = Color.White;
-            txtammo.Location = new Point(9, 9);
+            txtammo.Location = new Point(13, 15);
+            txtammo.Margin = new Padding(4, 0, 4, 0);
             txtammo.Name = "txtammo";
-            txtammo.Size = new Size(92, 25);
+            txtammo.Size = new Size(142, 40);
             txtammo.TabIndex = 0;
             txtammo.Text = "Ammo: 0";
             // 
@@ -58,9 +59,10 @@
             txtscore.AutoSize = true;
             txtscore.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             txtscore.ForeColor = Color.White;
-            txtscore.Location = new Point(403, 8);
+            txtscore.Location = new Point(576, 13);
+            txtscore.Margin = new Padding(4, 0, 4, 0);
             txtscore.Name = "txtscore";
-            txtscore.Size = new Size(68, 25);
+            txtscore.Size = new Size(106, 40);
             txtscore.TabIndex = 1;
             txtscore.Text = "Kills: 0";
             // 
@@ -69,31 +71,35 @@
             txthealth.AutoSize = true;
             txthealth.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             txthealth.ForeColor = Color.White;
-            txthealth.Location = new Point(664, 9);
+            txthealth.Location = new Point(949, 15);
+            txthealth.Margin = new Padding(4, 0, 4, 0);
             txthealth.Name = "txthealth";
-            txthealth.Size = new Size(70, 25);
+            txthealth.Size = new Size(107, 40);
             txthealth.TabIndex = 2;
             txthealth.Text = "Health";
             // 
             // healthBar
             // 
-            healthBar.Location = new Point(743, 14);
+            healthBar.Location = new Point(1061, 23);
+            healthBar.Margin = new Padding(4, 5, 4, 5);
             healthBar.Name = "healthBar";
-            healthBar.Size = new Size(169, 23);
+            healthBar.Size = new Size(241, 38);
             healthBar.TabIndex = 3;
             healthBar.Value = 100;
             // 
             // Game
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(1904, 1041);
+            ClientSize = new Size(2720, 1268);
             Controls.Add(healthBar);
             Controls.Add(txthealth);
             Controls.Add(txtscore);
             Controls.Add(txtammo);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Game";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Paint += CharacterPaintEvent;
             KeyDown += KeyIsDown;

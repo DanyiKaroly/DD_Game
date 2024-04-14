@@ -79,73 +79,79 @@ namespace _7days7nights_no_0
             }
         }
 
- private void plus_hp_Click(object sender, EventArgs e)
- {
-     if (Player.SkillPoints != 0)
-     {
+        private void plus_hp_Click(object sender, EventArgs e)
+        {
+            if (Player.SkillPoints != 0)
+            {
 
-         Player.PlayerHealth++;
-         Current_HP.Text = Convert.ToString(Player.PlayerHealth);
-         Player.SkillPoints--;
-         Skill_Point.Text = $"Skill_Points: {Convert.ToString(Player.SkillPoints)}";
-     }
- }
+                Player.PlayerHealth++;
+                Current_HP.Text = Convert.ToString(Player.PlayerHealth);
+                Player.SkillPoints--;
+                Skill_Point.Text = $"Skill_Points: {Convert.ToString(Player.SkillPoints)}";
+            }
+        }
 
- private void minus_hp_Click(object sender, EventArgs e)
- {
-     if (Player.PlayerHealth != 3)
-     {
-         Player.PlayerHealth--;
-         Current_HP.Text = Convert.ToString(Player.PlayerHealth);
-         Player.SkillPoints++;
-         Skill_Point.Text = $"Skill_Points: {Convert.ToString(Player.SkillPoints)}";
-     }
- }
+        private void minus_hp_Click(object sender, EventArgs e)
+        {
+            if (Player.PlayerHealth != 0)
+            {
+                Player.PlayerHealth--;
+                Current_HP.Text = Convert.ToString(Player.PlayerHealth);
+                Player.SkillPoints++;
+                Skill_Point.Text = $"Skill_Points: {Convert.ToString(Player.SkillPoints)}";
+            }
+        }
 
- private void plus_damage_Click(object sender, EventArgs e)
- {
-     if (Player.SkillPoints != 0) {
+        private void plus_damage_Click(object sender, EventArgs e)
+        {
+            if (Player.SkillPoints != 0)
+            {
                 Player.Damage++;
 
-         Current_Damage.Text = Convert.ToString(Player.Damage);
+                Current_Damage.Text = Convert.ToString(Player.Damage);
                 Player.SkillPoints--;
-         Skill_Point.Text = $"Skill_Points: {Convert.ToString(Player.SkillPoints)}";
-     }
+                Skill_Point.Text = $"Skill_Points: {Convert.ToString(Player.SkillPoints)}";
+            }
 
- }
+        }
 
- private void minus_damage_Click(object sender, EventArgs e)
- {
-     if (Player.Damage != 1)
-     {
+        private void minus_damage_Click(object sender, EventArgs e)
+        {
+            if (Player.Damage != 1)
+            {
                 Player.Damage--;
-         Current_Damage.Text = Convert.ToString(Player.Damage);
+                Current_Damage.Text = Convert.ToString(Player.Damage);
                 Player.SkillPoints++;
-         Skill_Point.Text = $"Skill_Points: {Convert.ToString(Player.SkillPoints)}";
-     }
- }
+                Skill_Point.Text = $"Skill_Points: {Convert.ToString(Player.SkillPoints)}";
+            }
+        }
 
- private void plus_reload_time_Click(object sender, EventArgs e)
- {
-     if(Player.SkillPoints != 0)
-     {
-         Player.Reload_Time++;
-         Current_Reload_time.Text = Convert.ToString(Player.Reload_Time);
-         Player.SkillPoints--;
-         Skill_Point.Text = $"Skill_Points: {Convert.ToString(Player.SkillPoints)}";
-     }
+        private void plus_reload_time_Click(object sender, EventArgs e)
+        {
+            if (Player.SkillPoints != 0)
+            {
+                Player.Reload_Time++;
+                Current_Reload_time.Text = Convert.ToString(Player.Reload_Time);
+                Player.SkillPoints--;
+                Skill_Point.Text = $"Skill_Points: {Convert.ToString(Player.SkillPoints)}";
+            }
 
- }
+        }
 
- private void minus_reload_time_Click(object sender, EventArgs e)
- {
-     if (Player.Reload_Time != 1)
-     {
-         Player.Reload_Time--;
-         Current_Reload_time.Text = Convert.ToString(Player.Reload_Time);
-         Player.SkillPoints++;
-         Skill_Point.Text = $"Skill_Points: {Convert.ToString(Player.SkillPoints)}";
-     }
- }
+        private void minus_reload_time_Click(object sender, EventArgs e)
+        {
+            if (Player.Reload_Time != 1)
+            {
+                Player.Reload_Time--;
+                Current_Reload_time.Text = Convert.ToString(Player.Reload_Time);
+                Player.SkillPoints++;
+                Skill_Point.Text = $"Skill_Points: {Convert.ToString(Player.SkillPoints)}";
+            }
+        }
+
+        private void skills_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -24,7 +24,7 @@
         public bool GoUp { get; set; }
         public bool GoDown { get; set; }
         public bool Attack { get; set; }
-
+        public static int Map { get; internal set; }
 
         public Player(int playerHealth, int playerSpeed, int playerX, int playerY)
         {
