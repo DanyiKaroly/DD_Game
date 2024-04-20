@@ -7,9 +7,9 @@ namespace _7days7nights_no_0
     public partial class MenuForm : Form
     {
         Sounds songs = new Sounds();
-        Sound formMenu = new Sound();
-        InventoryPerSkills MoreMenuButton = new InventoryPerSkills();
+        Sound settingsForm = new Sound();
         Levels levels = new Levels();
+        InventoryPerSkills MoreMenuButton = new InventoryPerSkills();
         DBmethods dBmethods = new DBmethods();
         
         public MenuForm()
@@ -26,28 +26,29 @@ namespace _7days7nights_no_0
 
         private void button2_Click(object sender, EventArgs e)
         {
-            formMenu.Show();
             songs.MenuSongStop();
+            settingsForm.ShowDialog(); 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             songs.MenuSongStart();
-            
-
 
         }
 
 
         private void button4_Click(object sender, EventArgs e)
         {
-            levels.Show();
+
+            levels.ShowDialog();
         }
 
         private void inventoryButton_Click(object sender, EventArgs e)
         {
-            MoreMenuButton.Show();
+            MoreMenuButton.ShowDialog();
             
         }
+
+
     }
 }

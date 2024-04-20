@@ -12,6 +12,7 @@ namespace _7days7nights_no_0
 {
     public partial class InventoryPerSkills : Form
     {
+
         public InventoryPerSkills()
         {
             InitializeComponent();
@@ -29,8 +30,10 @@ namespace _7days7nights_no_0
 
         private void SkillsButton_Click(object sender, EventArgs e)
         {
+
             skills skillsek = new skills();
-            skillsek.Show();
+
+                skillsek.ShowDialog();
         }
     }
 }

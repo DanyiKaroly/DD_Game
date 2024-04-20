@@ -57,8 +57,7 @@ namespace _7days7nights_no_0
             else
             {
                 healthBar.Value = 0;
-                //MessageBox.Show("Ded");
-                //GameOver();
+                GameOver();
             }
 
             txtscore.Text = "Kills: " + Score;
@@ -182,7 +181,7 @@ namespace _7days7nights_no_0
                     )
                 {
                     //NOTE: Program dies if zombie remowed here, do it elsewhere, use diferent logic or a plus parameter
-                    Player.PlayerHealth = Player.PlayerHealth - 25;
+                    Player.PlayerHealth = Player.PlayerHealth - 1;
 
                 }
                 foreach (Bullet bullet in BulletList)
@@ -238,7 +237,7 @@ namespace _7days7nights_no_0
 
             if ((e.KeyCode.Equals(Keys.Space)))
             {
-                Player.Attack = true;
+                ShootBullet(Direction);
             }
 
             if (e.KeyCode.Equals(Keys.K))
@@ -272,7 +271,6 @@ namespace _7days7nights_no_0
             if (e.KeyCode.Equals(Keys.Space))
             {
                 Player.Attack = false;
-                ShootBullet(Direction);
             }
         }
 
