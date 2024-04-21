@@ -17,8 +17,13 @@ namespace _7days7nights_no_0
 
         public DBmethods()
         {
-            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "7days7nights_no_0\\db_file", "DD.db");
+            string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string dbPath = Path.Combine(currentDirectory, "db_file", "DD.db");
+            Console.WriteLine($"Adatbázis elérési út: {dbPath}");
+
             string connString = $"Data Source={dbPath};Version=3;";
+
+
             conn = new SQLiteConnection(connString);
 
         }
