@@ -305,6 +305,9 @@ namespace _7days7nights_no_0
             }
         }
 
+        private void Game_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

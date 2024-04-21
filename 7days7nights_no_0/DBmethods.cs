@@ -17,13 +17,14 @@ namespace _7days7nights_no_0
 
         public DBmethods()
         {
-
-            conn = new SQLiteConnection("Data Source=db_file\\DD.db;Version=3;");
+            string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "7days7nights_no_0\\db_file", "DD.db");
+            string connString = $"Data Source={dbPath};Version=3;";
+            conn = new SQLiteConnection(connString);
 
         }
 
         public void Read_from_DB() {
-            string sql = "select hp, speed, damage, firerate, reloadtime, level, xp, skillpoint, map from player";
+            string sql = "select hp, speed, damage, firerate, reloadtime, level, xp, skillpoint, map from player;";
 
                 try
                 {
@@ -57,6 +58,34 @@ namespace _7days7nights_no_0
                         conn.Close();
                     }
         }
+
+        public void save()
+        {
+            string updatesql = $"UPDATE player SET hp={Player.PlayerHealth}, speed={Player.PlayerSpeed}, damage={Player.Damage}, firerate={Player.Firerate}, reloadtime={Player.Reload_Time}, level={Player.Level}, xp={Player.Xp}, skillpoint={Player.SkillPoints}, map={Player.Map};";
+
+            try
+            {
+                conn.Open();
+                SQLiteCommand updatecommand = new SQLiteCommand(updatesql, conn);
+
+                MessageBox.Show("Executing '" + updatesql + "' statement...");
+                int resultNumber = updatecommand.ExecuteNonQuery();
+                MessageBox.Show(resultNumber + " rows updated successfully"+   +Player.PlayerHealth);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Hibás módosítás: {e.Message}+     + {Player.PlayerHealth}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+
+
+        }
+
+
     }
 
 }

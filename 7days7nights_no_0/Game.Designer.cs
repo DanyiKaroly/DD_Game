@@ -101,6 +101,7 @@
             Name = "Game";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Game_Load;
             Paint += CharacterPaintEvent;
             KeyDown += KeyIsDown;
             KeyUp += KeyIsUp;

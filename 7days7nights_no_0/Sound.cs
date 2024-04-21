@@ -120,5 +120,10 @@ namespace Demo
             panel2.BackColor = Color.FromArgb(200, 240, 240, 240);
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

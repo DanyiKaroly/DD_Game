@@ -12,12 +12,13 @@ namespace _7days7nights_no_0
 {
     public partial class skills : Form
     {
+        DBmethods DBmethods = new DBmethods();
 
         public skills()
         {
             InitializeComponent();
-            Player.set_XP(1500);
-            Player.set_XP(500);
+            //Player.set_XP(1500);
+            //Player.set_XP(500);
             Current_Speed.Text = Convert.ToString(Player.PlayerSpeed);
             Current_Firerate.Text = Convert.ToString(Player.Firerate);
             Current_HP.Text = Convert.ToString(Player.PlayerHealth);
@@ -56,6 +57,7 @@ namespace _7days7nights_no_0
                 Current_HP.Text = Convert.ToString(Player.PlayerHealth);
                 Player.SkillPoints++;
                 Skill_Point.Text = $"Skill_Points: {Convert.ToString(Player.SkillPoints)}";
+                
             }
         }
 
@@ -144,6 +146,8 @@ namespace _7days7nights_no_0
                 Current_HP.Text = Convert.ToString(Player.PlayerHealth);
                 Player.SkillPoints--;
                 Skill_Point.Text = $"Skill_Points: {Convert.ToString(Player.SkillPoints)}";
+               
+                
             }
         }
 
@@ -161,7 +165,7 @@ namespace _7days7nights_no_0
         private void Back_To_Main_Click_1(object sender, EventArgs e)
         {
             this.Close();
-
+           
         }
     }
 }
