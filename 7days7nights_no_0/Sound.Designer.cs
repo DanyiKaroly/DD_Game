@@ -49,11 +49,10 @@
             // volumeTrackBar
             // 
             volumeTrackBar.BackColor = SystemColors.ControlDarkDark;
-            volumeTrackBar.Location = new Point(14, 85);
-            volumeTrackBar.Margin = new Padding(4, 5, 4, 5);
+            volumeTrackBar.Location = new Point(10, 51);
             volumeTrackBar.Maximum = 100;
             volumeTrackBar.Name = "volumeTrackBar";
-            volumeTrackBar.Size = new Size(263, 69);
+            volumeTrackBar.Size = new Size(184, 45);
             volumeTrackBar.TabIndex = 0;
             volumeTrackBar.TickFrequency = 10;
             volumeTrackBar.Value = 50;
@@ -64,20 +63,19 @@
             panel1.BackColor = SystemColors.ControlLight;
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(3, 2);
-            panel1.Margin = new Padding(4, 5, 4, 5);
+            panel1.Location = new Point(2, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(301, 1705);
+            panel1.Size = new Size(211, 1023);
             panel1.TabIndex = 1;
             // 
             // button1
             // 
             button1.BackColor = Color.IndianRed;
             button1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            button1.Location = new Point(34, 1555);
-            button1.Margin = new Padding(4, 3, 4, 3);
+            button1.Location = new Point(24, 933);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(223, 113);
+            button1.Size = new Size(156, 68);
             button1.TabIndex = 1;
             button1.Text = "Exit";
             button1.UseVisualStyleBackColor = false;
@@ -87,10 +85,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Mongolian Baiti", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(34, 40);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(24, 24);
             label1.Name = "label1";
-            label1.Size = new Size(184, 50);
+            label1.Size = new Size(126, 34);
             label1.TabIndex = 0;
             label1.Text = "Settings";
             // 
@@ -98,10 +95,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Mongolian Baiti", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(14, 42);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(10, 25);
             label2.Name = "label2";
-            label2.Size = new Size(202, 34);
+            label2.Size = new Size(140, 23);
             label2.TabIndex = 2;
             label2.Text = "Music sounds";
             // 
@@ -109,21 +105,19 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Mongolian Baiti", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(14, 238);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(10, 143);
             label3.Name = "label3";
-            label3.Size = new Size(222, 34);
+            label3.Size = new Size(152, 23);
             label3.TabIndex = 4;
             label3.Text = "Effects Sounds";
             // 
             // volumeTrackBar2
             // 
             volumeTrackBar2.BackColor = SystemColors.ControlDarkDark;
-            volumeTrackBar2.Location = new Point(14, 282);
-            volumeTrackBar2.Margin = new Padding(4, 5, 4, 5);
+            volumeTrackBar2.Location = new Point(10, 169);
             volumeTrackBar2.Maximum = 100;
             volumeTrackBar2.Name = "volumeTrackBar2";
-            volumeTrackBar2.Size = new Size(263, 69);
+            volumeTrackBar2.Size = new Size(184, 45);
             volumeTrackBar2.TabIndex = 3;
             volumeTrackBar2.TickFrequency = 10;
             volumeTrackBar2.Value = 50;
@@ -133,10 +127,10 @@
             // 
             button2.BackColor = SystemColors.ActiveCaption;
             button2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            button2.Location = new Point(286, 85);
-            button2.Margin = new Padding(4, 3, 4, 3);
+            button2.Location = new Point(200, 51);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(177, 75);
+            button2.Size = new Size(124, 45);
             button2.TabIndex = 2;
             button2.Text = "TestMusic";
             button2.UseVisualStyleBackColor = false;
@@ -146,10 +140,10 @@
             // 
             button3.BackColor = SystemColors.ActiveCaption;
             button3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            button3.Location = new Point(286, 282);
-            button3.Margin = new Padding(4, 3, 4, 3);
+            button3.Location = new Point(200, 169);
+            button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
-            button3.Size = new Size(177, 75);
+            button3.Size = new Size(124, 45);
             button3.TabIndex = 5;
             button3.Text = "TestSFX";
             button3.UseVisualStyleBackColor = false;
@@ -164,26 +158,24 @@
             panel2.Controls.Add(volumeTrackBar2);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(volumeTrackBar);
-            panel2.Location = new Point(313, 42);
-            panel2.Margin = new Padding(4, 5, 4, 5);
+            panel2.Location = new Point(219, 25);
             panel2.Name = "panel2";
-            panel2.Size = new Size(566, 428);
+            panel2.Size = new Size(396, 257);
             panel2.TabIndex = 6;
             panel2.Paint += panel2_Paint;
             // 
             // Sound
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1463, 1649);
+            ClientSize = new Size(1024, 1024);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 5, 4, 5);
-            MaximumSize = new Size(1463, 1707);
-            MinimumSize = new Size(1463, 1006);
+            MaximumSize = new Size(1024, 1024);
+            MinimumSize = new Size(1024, 604);
             Name = "Sound";
             ShowIcon = false;
             ShowInTaskbar = false;

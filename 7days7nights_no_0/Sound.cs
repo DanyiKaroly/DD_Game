@@ -14,6 +14,7 @@ namespace Demo
         {
             song = new Sounds();
             InitializeComponent();
+            
         }
 
         private void volumeTrackBar_Scroll(object sender, EventArgs e)

@@ -19,8 +19,8 @@ namespace Demo
 
 
 
-        private static int volume = 50;
-        private static int volumesfx = 50;
+        private static int volume;
+        private static int volumesfx;
 
         public Sounds()
         {
