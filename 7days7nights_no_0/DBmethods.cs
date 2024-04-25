@@ -1,4 +1,5 @@
 ﻿
+using Demo;
 using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
@@ -14,6 +15,7 @@ namespace _7days7nights_no_0
     {
         
          SQLiteConnection conn;
+         Sounds sound=new Sounds();
 
         public DBmethods()
         {
@@ -29,7 +31,7 @@ namespace _7days7nights_no_0
         }
 
         public void Read_from_DB() {
-            string sql = "select hp, speed, damage, firerate, reloadtime, level, xp, skillpoint, map from player;";
+            string sql = "select hp, speed, damage, firerate, reloadtime, level, xp, skillpoint, map, volume, volumesfx from player;";
 
                 try
                 {
@@ -50,7 +52,9 @@ namespace _7days7nights_no_0
                                 Player.Xp = reader.GetInt32(reader.GetOrdinal("xp"));
                                 Player.SkillPoints = reader.GetInt32(reader.GetOrdinal("skillpoint"));
                                 Player.Map = reader.GetInt32(reader.GetOrdinal("map"));
-                            }
+                                sound.MusicVolumeSet(reader.GetInt32(reader.GetOrdinal("volume")));
+                                sound.VolumeSFXSet(reader.GetInt32(reader.GetOrdinal("volumesfx")));
+                        }
                         }
                     }
                 }
@@ -66,16 +70,16 @@ namespace _7days7nights_no_0
 
         public void save()
         {
-            string updatesql = $"UPDATE player SET hp={Player.PlayerHealth}, speed={Player.PlayerSpeed}, damage={Player.Damage}, firerate={Player.Firerate}, reloadtime={Player.Reload_Time}, level={Player.Level}, xp={Player.Xp}, skillpoint={Player.SkillPoints}, map={Player.Map};";
+            string updatesql = $"UPDATE player SET hp={Player.PlayerHealth}, speed={Player.PlayerSpeed}, damage={Player.Damage}, firerate={Player.Firerate}, reloadtime={Player.Reload_Time}, level={Player.Level}, xp={Player.Xp}, skillpoint={Player.SkillPoints}, map={Player.Map}, volume={sound.MusicVolumeGet()}, volumesfx={sound.SfxVolumeGet()};";
 
             try
             {
                 conn.Open();
                 SQLiteCommand updatecommand = new SQLiteCommand(updatesql, conn);
 
-                MessageBox.Show("Executing '" + updatesql + "' statement...");
+                //MessageBox.Show("Executing '" + updatesql + "' statement...");
                 int resultNumber = updatecommand.ExecuteNonQuery();
-                MessageBox.Show(resultNumber + " rows updated successfully"+   +Player.PlayerHealth);
+                //MessageBox.Show(resultNumber + " rows updated successfully"+   +Player.PlayerHealth);
             }
             catch (Exception e)
             {

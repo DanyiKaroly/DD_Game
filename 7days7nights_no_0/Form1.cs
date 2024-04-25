@@ -21,7 +21,6 @@ namespace _7days7nights_no_0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Player.PlayerHealth++;
             dBmethods.save();
             Application.Exit();
         }
