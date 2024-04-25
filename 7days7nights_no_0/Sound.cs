@@ -13,8 +13,11 @@ namespace Demo
         public Sound()
         {
             song = new Sounds();
-            InitializeComponent();
             
+            InitializeComponent();
+           
+
+
         }
 
         private void volumeTrackBar_Scroll(object sender, EventArgs e)
@@ -31,8 +34,8 @@ namespace Demo
         private void Form1_Load(object sender, EventArgs e)
         {
             // Csúszka inicializálása
-            TrackBar volumeTrackBar = InicializalCsuszkat(song.MusicVolumeGet(), volumeTrackBar_Scroll);
-            TrackBar volumeTrackBar2 = InicializalCsuszkatsfx(song.SfxVolumeGet(), volumeTrackBar2_Scroll);
+            TrackBar volumeTrackBar = InicializalCsuszkat(volumeTrackBar_Scroll);
+            TrackBar volumeTrackBar2 = InicializalCsuszkatsfx(volumeTrackBar2_Scroll);
 
             // Csúszka hozzáadása a Form-hoz
             Controls.Add(volumeTrackBar);
@@ -40,13 +43,14 @@ namespace Demo
 
         }
 
-        private TrackBar InicializalCsuszkat(int kezdoErtek, EventHandler esemenyKezelo)
+        private TrackBar InicializalCsuszkat(EventHandler esemenyKezelo)
         {
 
             TrackBar volumeTrackBar = new TrackBar();
             volumeTrackBar.Minimum = 0;
             volumeTrackBar.Maximum = 100;
-            volumeTrackBar.Value = kezdoErtek;
+            volumeTrackBar.Value = Sounds.volume;
+            volumeTrackBar.TabIndex = song.MusicVolumeGet();
             volumeTrackBar.TickFrequency = 10;
             volumeTrackBar.Orientation = Orientation.Horizontal;
             volumeTrackBar.Scroll += esemenyKezelo;
@@ -55,12 +59,12 @@ namespace Demo
             return volumeTrackBar;
         }
 
-        private TrackBar InicializalCsuszkatsfx(int kezdoErtek, EventHandler esemenyKezelo)
+        private TrackBar InicializalCsuszkatsfx(EventHandler esemenyKezelo)
         {
             TrackBar volumeTrackBar = new TrackBar();
             volumeTrackBar.Minimum = 0;
             volumeTrackBar.Maximum = 100;
-            volumeTrackBar.Value = kezdoErtek;
+            volumeTrackBar.Value = Sounds.volumesfx;
             volumeTrackBar.TickFrequency = 10;
             volumeTrackBar.Orientation = Orientation.Horizontal;
             volumeTrackBar.Scroll += esemenyKezelo;
@@ -124,6 +128,7 @@ namespace Demo
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
             this.Close();
         }
     }

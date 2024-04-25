@@ -70,7 +70,7 @@ namespace _7days7nights_no_0
 
         public void save()
         {
-            string updatesql = $"UPDATE player SET hp={Player.PlayerHealth}, speed={Player.PlayerSpeed}, damage={Player.Damage}, firerate={Player.Firerate}, reloadtime={Player.Reload_Time}, level={Player.Level}, xp={Player.Xp}, skillpoint={Player.SkillPoints}, map={Player.Map}, volume={sound.MusicVolumeGet()}, volumesfx={sound.SfxVolumeGet()};";
+            string updatesql = $"UPDATE player SET hp={Player.PlayerHealth}, speed={Player.PlayerSpeed}, damage={Player.Damage}, firerate={Player.Firerate}, reloadtime={Player.Reload_Time}, level={Player.Level}, xp={Player.Xp}, skillpoint={Player.SkillPoints}, map={Player.Map}, volume={Sounds.volume}, volumesfx={Sounds.volumesfx};";
 
             try
             {
