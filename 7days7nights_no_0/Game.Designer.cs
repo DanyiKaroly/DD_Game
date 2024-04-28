@@ -29,28 +29,27 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            GameTImer = new System.Windows.Forms.Timer(components);
+            GameTimer = new System.Windows.Forms.Timer(components);
             txtammo = new Label();
             txtscore = new Label();
             txthealth = new Label();
             healthBar = new ProgressBar();
             SuspendLayout();
             // 
-            // GameTImer
+            // GameTimer
             // 
-            GameTImer.Enabled = true;
-            GameTImer.Interval = 20;
-            GameTImer.Tick += MainTimerEvent;
+            GameTimer.Enabled = true;
+            GameTimer.Interval = 20;
+            GameTimer.Tick += MainTimerEvent;
             // 
             // txtammo
             // 
             txtammo.AutoSize = true;
             txtammo.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             txtammo.ForeColor = Color.White;
-            txtammo.Location = new Point(13, 15);
-            txtammo.Margin = new Padding(4, 0, 4, 0);
+            txtammo.Location = new Point(9, 9);
             txtammo.Name = "txtammo";
-            txtammo.Size = new Size(142, 40);
+            txtammo.Size = new Size(92, 25);
             txtammo.TabIndex = 0;
             txtammo.Text = "Ammo: 0";
             // 
@@ -59,10 +58,9 @@
             txtscore.AutoSize = true;
             txtscore.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             txtscore.ForeColor = Color.White;
-            txtscore.Location = new Point(576, 13);
-            txtscore.Margin = new Padding(4, 0, 4, 0);
+            txtscore.Location = new Point(403, 8);
             txtscore.Name = "txtscore";
-            txtscore.Size = new Size(106, 40);
+            txtscore.Size = new Size(68, 25);
             txtscore.TabIndex = 1;
             txtscore.Text = "Kills: 0";
             // 
@@ -71,33 +69,30 @@
             txthealth.AutoSize = true;
             txthealth.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
             txthealth.ForeColor = Color.White;
-            txthealth.Location = new Point(949, 15);
-            txthealth.Margin = new Padding(4, 0, 4, 0);
+            txthealth.Location = new Point(664, 9);
             txthealth.Name = "txthealth";
-            txthealth.Size = new Size(107, 40);
+            txthealth.Size = new Size(70, 25);
             txthealth.TabIndex = 2;
             txthealth.Text = "Health";
             // 
             // healthBar
             // 
-            healthBar.Location = new Point(1061, 23);
-            healthBar.Margin = new Padding(4, 5, 4, 5);
+            healthBar.Location = new Point(743, 14);
             healthBar.Name = "healthBar";
-            healthBar.Size = new Size(241, 38);
+            healthBar.Size = new Size(169, 23);
             healthBar.TabIndex = 3;
             healthBar.Value = 100;
             // 
             // Game
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 64, 64);
-            ClientSize = new Size(2720, 1268);
+            ClientSize = new Size(1347, 637);
             Controls.Add(healthBar);
             Controls.Add(txthealth);
             Controls.Add(txtscore);
             Controls.Add(txtammo);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "Game";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
@@ -110,7 +105,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer GameTImer;
+        private System.Windows.Forms.Timer GameTimer;
         private Label txtammo;
         private Label txtscore;
         private Label txthealth;

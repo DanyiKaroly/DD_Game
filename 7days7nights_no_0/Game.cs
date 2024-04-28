@@ -8,7 +8,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static _7days7nights_no_0.Bullet;
+using static _7days7nights_no_0.EnumContainer;
 
 namespace _7days7nights_no_0
 {
@@ -85,12 +85,12 @@ namespace _7days7nights_no_0
                 if (zombie.EnemyX > Player.PlayerX)
                 {
                     zombie.EnemyX -= ZombieSpeed;
-                    zombie.AnimateEnemy(SpriteContainer.zombieWalkRight, zombie);
+                    zombie.AnimateEnemy(SpriteContainer.zombieWalkRight);
                 }
                 if (zombie.EnemyX < Player.PlayerX)
                 {
                     zombie.EnemyX += ZombieSpeed;
-                    zombie.AnimateEnemy(SpriteContainer.zombieWalkRight, zombie);
+                    zombie.AnimateEnemy(SpriteContainer.zombieWalkRight);
                 }
 
                 if (zombie.EnemyY > Player.PlayerY)
@@ -112,23 +112,27 @@ namespace _7days7nights_no_0
             if (Player.GoLeft && Player.PlayerX > 0)
             {
                 Player.PlayerX -= Player.PlayerSpeed;
-                Player.AnimatePlayer(SpriteContainer.walkRight);
+                //Player.AnimatePlayer(SpriteContainer.walkRight);
+                Player.SendDirection(Direction);
             }
 
             if (Player.GoRight && Player.PlayerX + Player.PlayerWidth < this.Width)
             {
                 Player.PlayerX += Player.PlayerSpeed;
-                Player.AnimatePlayer(SpriteContainer.walkRight);
+                //Player.AnimatePlayer(SpriteContainer.walkRight);
+                Player.SendDirection(Direction);
             }
 
             if (Player.GoUp && Player.PlayerY > 150)
             {
                 Player.PlayerY -= Player.PlayerSpeed;
+                Player.SendDirection(Direction);
             }
 
             if (Player.GoDown && Player.PlayerY + Player.PlayerHeight < this.Height)
             {
                 Player.PlayerY += Player.PlayerSpeed;
+                Player.SendDirection(Direction);
             }
         }
 
@@ -181,7 +185,7 @@ namespace _7days7nights_no_0
                     )
                 {
                     //NOTE: Program dies if zombie remowed here, do it elsewhere, use diferent logic or a plus parameter
-                    Player.PlayerHealth = Player.PlayerHealth - 1;
+                    Player.PlayerHealth--;
 
                 }
                 foreach (Bullet bullet in BulletList)
@@ -226,13 +230,11 @@ namespace _7days7nights_no_0
             if (e.KeyCode.Equals(Keys.Up))
             {
                 Player.GoUp = true;
-                Direction = DirectionType.UP;
             }
 
             if (e.KeyCode.Equals(Keys.Down))
             {
                 Player.GoDown = true;
-                Direction = DirectionType.DOWN;
             }
 
             if ((e.KeyCode.Equals(Keys.Space)))
@@ -291,6 +293,8 @@ namespace _7days7nights_no_0
         private void GameOver()
         {
             //TODO: Store the important data before closing the form!!!
+            GameTimer.Stop();
+            MessageBox.Show("Game over");
             this.Close();
         }
 

@@ -23,23 +23,23 @@
             Steps = 0;
         }
 
-        public void AnimateEnemy(Image[] source, Zombie zombie)
+        public void AnimateEnemy(Image[] source)
         {
             int end = source.Length - 1;
 
-            zombie.SlowDownEnemyFrameRate++;
-            if (zombie.SlowDownEnemyFrameRate == 4)
+            SlowDownEnemyFrameRate++;
+            if (SlowDownEnemyFrameRate == 4)
             {
-                zombie.SpriteIndex++;
-                zombie.SlowDownEnemyFrameRate = 0;
+                SpriteIndex++;
+                SlowDownEnemyFrameRate = 0;
             }
 
-            if (zombie.SpriteIndex > end)
+            if (SpriteIndex > end)
             {
-                zombie.SpriteIndex = 0;
+                SpriteIndex = 0;
             }
 
-            zombie.ZombieImage = source[Steps];
+            ZombieImage = source[SpriteIndex];
         }
 
         public void AnimateEnemyDying()

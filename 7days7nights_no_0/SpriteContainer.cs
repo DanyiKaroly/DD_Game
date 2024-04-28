@@ -12,6 +12,14 @@ namespace _7days7nights_no_0
             GetImageFromExecutingAssembly("Kuno_walk4.png"),
         ];
 
+        static public readonly Image[] walkLeft =
+        [
+            GetImageFromExecutingAssembly("Kuno_left1.png"),
+            GetImageFromExecutingAssembly("Kuno_left2.png"),
+            GetImageFromExecutingAssembly("Kuno_left3.png"),
+            GetImageFromExecutingAssembly("Kuno_left4.png"),
+        ];
+
         static public readonly Image[] zombieWalkRight =
         [
             GetImageFromExecutingAssembly("Zom_walk1.png"),

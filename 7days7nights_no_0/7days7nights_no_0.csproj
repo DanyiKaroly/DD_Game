@@ -10,6 +10,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Sprites\Kuno_left1.png" />
+    <None Remove="Sprites\Kuno_left2.png" />
+    <None Remove="Sprites\Kuno_left3.png" />
+    <None Remove="Sprites\Kuno_left4.png" />
     <None Remove="Sprites\Kuno_walk1.png" />
     <None Remove="Sprites\Kuno_walk2.png" />
     <None Remove="Sprites\Kuno_walk3.png" />
@@ -37,6 +41,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Sprites\Kuno_left1.png" />
+    <EmbeddedResource Include="Sprites\Kuno_left2.png" />
+    <EmbeddedResource Include="Sprites\Kuno_left3.png" />
+    <EmbeddedResource Include="Sprites\Kuno_left4.png" />
     <EmbeddedResource Include="Sprites\Kuno_walk1.png" />
     <EmbeddedResource Include="Sprites\Kuno_walk2.png" />
     <EmbeddedResource Include="Sprites\Kuno_walk3.png" />

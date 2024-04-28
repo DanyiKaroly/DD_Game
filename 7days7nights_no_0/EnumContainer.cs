@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _7days7nights_no_0
+﻿namespace _7days7nights_no_0
 {
     public static class EnumContainer
     {
+        public enum DirectionType
+        {
+            UP,
+            DOWN,
+            LEFT,
+            RIGHT,
+        }
         public enum Skin
         {
             SURVIVOR,

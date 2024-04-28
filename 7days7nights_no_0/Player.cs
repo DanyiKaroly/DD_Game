@@ -1,4 +1,6 @@
-﻿namespace _7days7nights_no_0
+﻿using static _7days7nights_no_0.EnumContainer;
+
+namespace _7days7nights_no_0
 {
     internal class Player
     {
@@ -43,6 +45,17 @@
             Attack = false;
         }
 
+        public void SendDirection(DirectionType direction)
+        {
+            if (direction.Equals(DirectionType.LEFT))
+            {
+                AnimatePlayer(SpriteContainer.walkLeft);
+            }
+            else
+            {
+                AnimatePlayer(SpriteContainer.walkRight);
+            }
+        }
         public void AnimatePlayer(Image[] source)
         {
             int end = source.Length - 1;

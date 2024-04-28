@@ -1,15 +1,10 @@
-﻿namespace _7days7nights_no_0
+﻿using static _7days7nights_no_0.EnumContainer;
+
+namespace _7days7nights_no_0
 {
+    
     internal class Bullet
     {
-        public enum DirectionType
-        {
-            UP,
-            DOWN,
-            LEFT,
-            RIGHT,
-        }
-
         public DirectionType Direction { get; }
         public int Speed { get; }
         public PictureBox BulletImg { get; }
