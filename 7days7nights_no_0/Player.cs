@@ -75,17 +75,17 @@ namespace _7days7nights_no_0
             PlayerImg = source[Steps];
         }
 
-        public static void set_XP(int be_xp)
+        public static void Set_XP(int score)
         {
-            be_xp += Xp;
-            while (be_xp >= 1000)
+            int gainedXp = Xp + score * 100;
+            while (gainedXp >= 1000)
             {
-                be_xp = be_xp - 1000;
+                gainedXp = gainedXp - 1000;
                 Level++;
                 SkillPoints++;
 
             }
-            Xp = be_xp;
+            Xp = gainedXp;
         }
 
         //TODO: same method for animating the death of the player like in the zombie class

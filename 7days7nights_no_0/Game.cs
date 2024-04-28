@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static _7days7nights_no_0.EnumContainer;
+﻿using static _7days7nights_no_0.EnumContainer;
 
 namespace _7days7nights_no_0
 {
@@ -293,6 +283,7 @@ namespace _7days7nights_no_0
         private void GameOver()
         {
             //TODO: Store the important data before closing the form!!!
+            Player.Set_XP(Score);
             GameTimer.Stop();
             MessageBox.Show("Game over");
             this.Close();
