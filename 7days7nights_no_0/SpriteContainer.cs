@@ -4,7 +4,7 @@ namespace _7days7nights_no_0
 {
     static internal class SpriteContainer
     {
-        static public readonly Image[] walkRight =
+        static public readonly Image[] playerWalkRight =
         [
             GetImageFromExecutingAssembly("Kuno_walk1.png"),
             GetImageFromExecutingAssembly("Kuno_walk2.png"),
@@ -12,12 +12,21 @@ namespace _7days7nights_no_0
             GetImageFromExecutingAssembly("Kuno_walk4.png"),
         ];
 
-        static public readonly Image[] walkLeft =
+        static public readonly Image[] playerWalkLeft =
         [
             GetImageFromExecutingAssembly("Kuno_left1.png"),
             GetImageFromExecutingAssembly("Kuno_left2.png"),
             GetImageFromExecutingAssembly("Kuno_left3.png"),
             GetImageFromExecutingAssembly("Kuno_left4.png"),
+        ];
+
+        static public readonly Image[] playerDeath =
+        [
+            GetImageFromExecutingAssembly("Kuno_death1.png"),
+            GetImageFromExecutingAssembly("Kuno_death2.png"),
+            GetImageFromExecutingAssembly("Kuno_death3.png"),
+            GetImageFromExecutingAssembly("Kuno_death4.png"),
+            GetImageFromExecutingAssembly("Kuno_death5.png"),
         ];
 
         static public readonly Image[] zombieWalkRight =

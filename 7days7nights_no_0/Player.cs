@@ -12,6 +12,7 @@ namespace _7days7nights_no_0
         public int PlayerWidth { get; }
         public int PlayerHeight { get; }
         private int Steps { get; set; }
+        private int DeathSteps { get; set; }
         private int SlowDownFrameRate { get; set; }
         public static int Xp { get; set; }
         public static int Level { get; set; }
@@ -30,7 +31,7 @@ namespace _7days7nights_no_0
 
         public Player(int playerHealth, int playerSpeed, int playerX, int playerY)
         {
-            PlayerImg = SpriteContainer.walkRight[0];
+            PlayerImg = SpriteContainer.playerWalkRight[0];
             PlayerHealth = playerHealth;
             PlayerSpeed = playerSpeed;
             PlayerX = playerX;
@@ -38,6 +39,8 @@ namespace _7days7nights_no_0
             PlayerWidth = 100;
             PlayerHeight = 100;
             SlowDownFrameRate = 0;
+            Steps = 0;
+            DeathSteps = 0;
             GoLeft = false;
             GoRight = false;
             GoUp = false;
@@ -49,11 +52,11 @@ namespace _7days7nights_no_0
         {
             if (direction.Equals(DirectionType.LEFT))
             {
-                AnimatePlayer(SpriteContainer.walkLeft);
+                AnimatePlayer(SpriteContainer.playerWalkLeft);
             }
             else
             {
-                AnimatePlayer(SpriteContainer.walkRight);
+                AnimatePlayer(SpriteContainer.playerWalkRight);
             }
         }
         public void AnimatePlayer(Image[] source)
@@ -86,6 +89,39 @@ namespace _7days7nights_no_0
 
             }
             Xp = gainedXp;
+        }
+
+        public void PlayerDeathAnimation(Image[] source)
+        {
+            int end = source.Length-1;
+
+            SlowDownFrameRate++;
+            //if (SlowDownFrameRate == 4)
+            //{
+            DeathSteps++;
+            //    SlowDownFrameRate = 0;
+            //}
+
+            if (DeathSteps > end)
+            {
+                DeathSteps = 0;
+            }
+
+            PlayerImg = source[DeathSteps];
+
+            //while ( Steps < end)
+            //{
+            //    SlowDownFrameRate++;
+            //    if (SlowDownFrameRate == 4)
+            //    {
+            //        Steps++;
+            //        SlowDownFrameRate = 0;
+            //    }
+
+
+
+            //    PlayerImg = source[Steps];
+            //}
         }
 
         //TODO: same method for animating the death of the player like in the zombie class

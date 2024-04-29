@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WMPLib;
+﻿using WMPLib;
 
-namespace Demo
+namespace _7days7nights_no_0
 {
     public class Sounds
     {
@@ -59,7 +54,7 @@ namespace Demo
             enemyDieMedia.URL = "songs\\EnemyDie.mp3";
 
             playerDieMedia.settings.autoStart = false;
-            playerDieMedia.URL = "songs\\PlayerDie.mp3";
+            playerDieMedia.URL = "songs\\nomnom.mp3";
 
             shootMedia2.settings.autoStart = false;
             shootMedia2.URL = "songs\\ShootSongs.mp3";

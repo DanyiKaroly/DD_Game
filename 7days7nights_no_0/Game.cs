@@ -4,6 +4,7 @@ namespace _7days7nights_no_0
 {
     public partial class Game : Form
     {
+        private Sounds sound = new();
         public static int FormWidth { get; private set; }
         public static int FormHeight { get; private set; }
 
@@ -14,6 +15,7 @@ namespace _7days7nights_no_0
         private int MaxEnemy { get; set; }
         private List<Zombie> ZombiesList { get; set; }
         private List<Bullet> BulletList { get; set; }
+        private System.Windows.Forms.Timer animationTimer;
 
 
         public Game()
@@ -32,6 +34,9 @@ namespace _7days7nights_no_0
             BulletList = [];
             MaxEnemy = 10;
             this.BackgroundImage = Properties.Resources.FixMap;
+            animationTimer = new();
+            animationTimer.Interval = 100; // Interval in milliseconds (adjust as needed)
+            animationTimer.Tick += AnimationTimer_Tick;
 
             #endregion
 
@@ -46,7 +51,6 @@ namespace _7days7nights_no_0
             }
             else
             {
-                healthBar.Value = 0;
                 GameOver();
             }
 
@@ -284,25 +288,43 @@ namespace _7days7nights_no_0
         {
             //TODO: Store the important data before closing the form!!!
             Player.Set_XP(Score);
+            sound.PlayerDieSound();
+
             GameTimer.Stop();
-            MessageBox.Show("Game over");
-            this.Close();
+            animationTimer.Start();
+
+
         }
 
 
         private void CharacterPaintEvent(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            g.DrawImage(Player.PlayerImg, Player.PlayerX, Player.PlayerY, Player.PlayerWidth, Player.PlayerHeight);
             foreach (Zombie zombie in ZombiesList)
             {
                 g.DrawImage(zombie.ZombieImage, zombie.EnemyX, zombie.EnemyY, zombie.EnemyWidth, zombie.EnemyHeight);
             }
+            g.DrawImage(Player.PlayerImg, Player.PlayerX, Player.PlayerY, Player.PlayerWidth, Player.PlayerHeight);
         }
 
         private void Game_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void AnimationTimer_Tick(object sender, EventArgs e)
+        {
+            Player.PlayerDeathAnimation(SpriteContainer.playerDeath);
+            if (Player.PlayerImg == SpriteContainer.playerDeath[SpriteContainer.playerDeath.Length - 1])
+            {
+                Invalidate();
+                animationTimer.Stop();
+
+                MessageBox.Show("Game over");
+                this.Close();
+            }
+
+            Invalidate();
         }
     }
 }

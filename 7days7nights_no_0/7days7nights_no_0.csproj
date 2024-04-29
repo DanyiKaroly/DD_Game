@@ -10,6 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Sprites\Kuno_death1.png" />
+    <None Remove="Sprites\Kuno_death2.png" />
+    <None Remove="Sprites\Kuno_death3.png" />
+    <None Remove="Sprites\Kuno_death4.png" />
+    <None Remove="Sprites\Kuno_death5.png" />
     <None Remove="Sprites\Kuno_left1.png" />
     <None Remove="Sprites\Kuno_left2.png" />
     <None Remove="Sprites\Kuno_left3.png" />
@@ -41,6 +46,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Sprites\Kuno_death1.png" />
+    <EmbeddedResource Include="Sprites\Kuno_death2.png" />
+    <EmbeddedResource Include="Sprites\Kuno_death3.png" />
+    <EmbeddedResource Include="Sprites\Kuno_death4.png" />
+    <EmbeddedResource Include="Sprites\Kuno_death5.png" />
     <EmbeddedResource Include="Sprites\Kuno_left1.png" />
     <EmbeddedResource Include="Sprites\Kuno_left2.png" />
     <EmbeddedResource Include="Sprites\Kuno_left3.png" />
@@ -99,6 +109,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="songs\MenuMusic.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="songs\nomnom.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="songs\PlayerDie.mp3">
